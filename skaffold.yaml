@@ -31,6 +31,30 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: krukalex/orders
+      context: orders
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+    - image: krukalex/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+    - image: krukalex/payments
+      context: payments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 # apiVersion: skaffold/v4beta3
 # kind: Config
 # manifests:
