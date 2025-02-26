@@ -4,7 +4,7 @@ const buildClient = ({ req }) => {
   if (typeof window === "undefined") {
     //we are on the server
     return axios.create({
-      baseURL: "http://ticketing-app-project.store/",
+      baseURL: "http://www.ticketing-app-project.store/",
       headers: req.headers,
     });
   } else {
